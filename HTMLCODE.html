@@ -1,0 +1,72 @@
+<template>
+    <lightning-card title="Case Details">
+        <div class="container">
+            <div class="field11">
+                <lightning-input label="Customer Name" name="customerName" value={customerName} onkeyup={handleKeyup}
+                    onchange={handleAllOnClickFunction} required></lightning-input>
+                <p class="showmsg" style="color: red"></p>
+            </div>
+            <div class="field">
+                <lightning-input label="City" name="cityName" value={cityName} required
+                    onchange={handleAllOnClickFunction}></lightning-input>
+            </div>
+            <div class="field">
+                <lightning-combobox name="selectedCountry" label="Country" value={selectedCountry} options={countryOptions}
+                    onchange={handleAllOnClickFunction} required></lightning-combobox>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="field22">
+                <lightning-input label="Order Email Address" name="emailAdd" type="Email" value={emailVal} required
+                    onblur={handleemail}></lightning-input>
+                <p class="emailError" style="color: red"></p>
+            </div>
+            <div class="field">
+                <lightning-input label="Street" name="street" required onchange={handleAllOnClickFunction} value={street}></lightning-input>
+            </div>
+            <div class="field">
+                <lightning-input label="Postcode" name="Postcode" value={PostCode} type="Number" required
+                    onchange={handleAllOnClickFunction}></lightning-input>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="field33">
+                <lightning-input label="Phone Number" name="PhoneNumber" value={PhoneNum} type="Phone" required
+                    onchange={handleAllOnClickFunction}></lightning-input>
+            </div>
+            <div class="field">
+                <lightning-combobox name="numberOfProduct" label="Number Of Product To Be Returned" required
+                    value={numberOfProduct} options={Products} onchange={handleAllOnClickFunction}></lightning-combobox>
+            </div>
+        </div>
+        <div class="container4">
+            <div class="field44">
+                <lightning-combobox name="ReasonForReturn" required label="Reason For Return" value={ReasonForReturn}
+                    options={ReasonReturn} onchange={handleReason}></lightning-combobox>
+            </div>
+            <div class="field">
+                <lightning-combobox name="ProductName" label="Product1" required value={ProductName}
+                    options={ProductOption} onchange={handleAllOnClickFunction}></lightning-combobox>
+            </div>
+            <div class="field">
+                <lightning-combobox label="Request Type1" name="requestType" value={selectedRequestType} required options={requestTypeOptions}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="container5">
+            <p style="color: #666">Details of return or exchange</p>
+            <textarea class="resizable-textarea" placeholder="Type here...." required>{textAreaContent}</textarea>
+        </div>
+        <div class="container6">
+            <p class="showImageName"></p>
+            <lightning-file-upload label="Upload Files" name="fileUploader" required accept=".pdf, .png, .jpg" multiple
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+            <lightning-button variant="destructive" label="Delete Photo" onclick={deleteUploadedImage}></lightning-button>
+        </div>
+        <div class="slds-text-align_right">
+            <lightning-button variant="brand" label="Create Case" onclick={handleSave}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

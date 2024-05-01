@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field {
+    flex: 1;
+    margin-right: 10px;
+}
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container3{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container4{
+    display: flex;
+    flex-wrap: wrap;
+}
+.field22{
+    padding-top: 19px;
+    margin-right: 10px;
+    width: 600px;
+
+}
+.field33{
+    width: 600px;
+    padding-top: 19px;
+    margin-right: 10px;
+}
+.field44{
+    width: 600px;
+    padding-top: 19px;
+    margin-right: 10px;
+}
+.container5{
+    margin-top: 5px;
+    width: 600px;
+    resize: both;
+}
+.resizable-textarea {
+    width: 600px;
+    resize: vertical; /* This allows the textarea to be resized both vertically and horizontally */
+}
+.field11{
+    width: 600px;
+    margin-right: 10px;
+}
