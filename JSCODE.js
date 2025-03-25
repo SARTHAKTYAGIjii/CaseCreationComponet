@@ -36,6 +36,7 @@ export default class CaseWithDetails extends LightningElement {
     requestTypeOptions = [];
 
     async handleemail(event) {
+        console.log('inside the handleEmail method')
         this.emailVal = event.target.value;
         console.log(this.emailVal);
         if (this.isEmailValid(this.emailVal)) {
